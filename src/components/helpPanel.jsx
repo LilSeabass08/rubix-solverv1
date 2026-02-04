@@ -1,0 +1,1 @@
+// Instruction Box telling users how to orient cube and input colors.

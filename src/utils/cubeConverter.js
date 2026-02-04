@@ -1,0 +1,1 @@
+// transforms react code to a readable entry for the cube.js solver to interperet

@@ -1,0 +1,1 @@
+// panel of status, scrambled, solving, and solved
