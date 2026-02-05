@@ -15,38 +15,44 @@ body {
   padding: 16px;
 }
 
-.header {
+/* The container for the row of buttons */
+.color-palette {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px;
+  background: #333; /* Dark background to make colors pop */
+  border-radius: 8px;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 700;
+/* The individual buttons */
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent; /* Invisible border by default */
+  border-radius: 50%; /* Make them circular */
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.statusBar {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 13px;
-  opacity: 0.9;
+.color-btn:hover {
+  transform: scale(1.1);
 }
 
-.badge {
-  padding: 6px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
+/* The "Active" state */
+.color-btn.selected {
+  border-color: white; /* Thick white border when picked */
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
+/* Mapping names to actual colors */
+.color-btn.white { background-color: #ffffff; }
+.color-btn.yellow { background-color: #ffd500; }
+.color-btn.green { background-color: #009e60; }
+.color-btn.blue { background-color: #0051ba; }
+.color-btn.red { background-color: #c41e3a; }
+.color-btn.orange { background-color: #ff5800; }
 
 @media (min-width: 900px) {
   .grid {
@@ -54,21 +60,3 @@ body {
   }
 }
 
-.card {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 14px;
-}
-
-.cardTitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.smallText {
-  font-size: 13px;
-  line-height: 1.4;
-  opacity: 0.9;
-}

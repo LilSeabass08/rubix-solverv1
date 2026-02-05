@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { initialCubeState } from "./features/solver/cubeState";
+import {ColorPicker} from "./components/colorPicker.jsx"
 
 export default function App() {
   const [cubeData, setCubeData] = useState(initialCubeState);
@@ -26,6 +27,10 @@ export default function App() {
   return (
     <div className="app">
       <h1>Rubik's Solver</h1>
+      <ColorPicker>
+        activeColor = {selectedColor}
+        onColorClick = {setSelectedColor}
+      </ColorPicker>
     </div>
   );
 }
