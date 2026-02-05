@@ -41,7 +41,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #333;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -69,3 +69,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Mapping names to actual colors */
+.color-btn.white { background-color: #ffffff; }
+.color-btn.yellow { background-color: #ffd500; }
+.color-btn.green { background-color: #009e60; }
+.color-btn.blue { background-color: #0051ba; }
+.color-btn.red { background-color: #c41e3a; }
+.color-btn.orange { background-color: #ff5800; }

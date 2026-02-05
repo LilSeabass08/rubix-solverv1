@@ -22,7 +22,7 @@ body {
   justify-content: center;
   margin: 20px 0;
   padding: 10px;
-  background: #333; /* Dark background to make colors pop */
+  background: #fff; /* Dark background to make colors pop */
   border-radius: 8px;
 }
 
@@ -46,13 +46,7 @@ body {
   box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
-/* Mapping names to actual colors */
-.color-btn.white { background-color: #ffffff; }
-.color-btn.yellow { background-color: #ffd500; }
-.color-btn.green { background-color: #009e60; }
-.color-btn.blue { background-color: #0051ba; }
-.color-btn.red { background-color: #c41e3a; }
-.color-btn.orange { background-color: #ff5800; }
+
 
 @media (min-width: 900px) {
   .grid {
