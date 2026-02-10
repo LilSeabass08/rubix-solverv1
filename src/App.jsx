@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { initialCubeState } from "./features/solver/cubeState";
 import ColorPicker from "./components/colorPicker.jsx"
+import GridFace from "./components/gridFace.jsx"
+
 
 export default function App() {
   const [cubeData, setCubeData] = useState(initialCubeState);
@@ -31,6 +33,14 @@ export default function App() {
         activeColor = {selectedColor}
         onColorClick = {setSelectedColor}
       />
+      <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }}>
+    {/* Testing the Front Face */}
+    <GridFace 
+        face="F" 
+        stickers={cubeData.F} 
+        onStickerClick={handleStickerClick} 
+    />
+</div>
     </div>
   );
 }
