@@ -6,7 +6,8 @@ export default function StatusPanel({onReset}) {
             <button className="reset-btn" onClick={onReset}>
                 Reset
             </button>
-            {console.log("Reset Pressed")}
         </div>
+        
     )
+    
 }

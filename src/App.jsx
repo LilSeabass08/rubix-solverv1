@@ -40,9 +40,9 @@ export default function App() {
         activeColor = {selectedColor}
         onColorClick = {setSelectedColor}
       />
-      <StatusPanel>
-        <button onClick={handleReset}>Reset</button>
-      </StatusPanel>
+      <StatusPanel
+        onReset={handleReset}
+      />
       <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }}>
     {/* Testing the Front Face */}
     <GridFace 

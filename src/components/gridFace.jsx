@@ -5,7 +5,7 @@ export default function GridFace({ face, stickers, onStickerClick }) {
     <div className="grid-face">
       {stickers.map((color, index) => (
         <div
-          key={`${face}-${index}`} // Unique ID: "U-0", "U-1", etc.
+          key={`${face}-${index}`}
           className={`sticker ${color}`}
           onClick={() => 
             onStickerClick(face, index)

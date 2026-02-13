@@ -87,7 +87,7 @@ button:focus-visible {
   gap: 4px; /* Space between stickers */
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  background-color: gray;
   padding: 4px;
   border-radius: 4px;
 }
