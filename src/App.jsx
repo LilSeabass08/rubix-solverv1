@@ -5,6 +5,7 @@ import { initialCubeState } from "./features/solver/cubeState";
 import ColorPicker from "./components/colorPicker.jsx";
 import GridFace from "./components/gridFace.jsx";
 import StatusPanel from "./components/validationPanel.jsx";
+import GridLayout from "./components/cubeGridLayout.jsx";
 
 
 export default function App() {
@@ -44,13 +45,11 @@ export default function App() {
         onReset={handleReset}
       />
       <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }}>
-    {/* Testing the Front Face */}
-    <GridFace 
-        face="F" 
-        stickers={cubeData.F} 
-        onStickerClick={handleStickerClick} 
-    />
-</div>
+      <GridLayout 
+        cubeData={cubeData}
+        onStickerClick={handleStickerClick}
+      />
+      </div>
     </div>
   );
 }

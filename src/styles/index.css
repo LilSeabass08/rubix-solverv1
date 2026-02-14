@@ -119,3 +119,43 @@ button:focus-visible {
 .reset-btn:hover {
   background-color: #cc0000;
 }
+
+/* src/styles/index.css */
+
+.grid-layout {
+  display: grid;
+  gap: 10px;
+  justify-content: center; /* Centers the whole cross on screen */
+  margin: 20px auto;
+  
+  /* We need 3 columns of equal size (e.g., 150px) 
+     and 4 rows of equal size.
+  */
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px 150px;
+
+  /* VISUAL MAP:
+     . = empty space
+     U = Up (White)
+     L = Left (Orange)
+     F = Front (Green)
+     R = Right (Red)
+     D = Down (Yellow)
+     B = Back (Blue)
+  */
+  grid-template-areas:
+    ". U ."
+    "L F R"
+    ". D ."
+    ". B .";
+}
+
+/* Now we tell the children where to sit */
+/* IMPORTANT: You must add these classNames to the divs WRAPPING your GridFaces */
+
+.face-u { grid-area: U; }
+.face-l { grid-area: L; }
+.face-f { grid-area: F; }
+.face-r { grid-area: R; }
+.face-d { grid-area: D; }
+.face-b { grid-area: B; }
