@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { initialCubeState } from "./features/solver/cubeState";
 import ColorPicker from "./components/colorPicker.jsx";
-import GridFace from "./components/gridFace.jsx";
 import StatusPanel from "./components/validationPanel.jsx";
 import GridLayout from "./components/cubeGridLayout.jsx";
 
@@ -20,8 +19,13 @@ export default function App() {
 
   const handleStickerClick = (face, index) => {
     if (index === 4) {
-      console.warn("Centers cannot be changed!");
-      return;
+        setCubeData((prev) => {
+            return {
+                ...prev,
+                [face]: initialCubeState[face]
+            };
+        });
+        return;
     }
 
     setCubeData((previousCubeData) => {

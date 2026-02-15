@@ -3,7 +3,7 @@
 
 import GridFace from "./gridFace";
 
-export default function GridLayout(cubeData, onStickerClick) {
+export default function GridLayout({cubeData, onStickerClick}) {
     return(
         <div className="grid-layout">
             <div className="face-f">
@@ -41,7 +41,7 @@ export default function GridLayout(cubeData, onStickerClick) {
                 onStickerClick={onStickerClick}
                     />
             </div>
-            <div>
+            <div className="face-b">
                 <GridFace 
                     face="B"
                     stickers={cubeData.B}
